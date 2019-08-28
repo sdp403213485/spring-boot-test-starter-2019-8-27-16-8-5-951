@@ -75,7 +75,7 @@ public class HomeControllerTest {
     @Test
     public void shouldGotGneratedIdInBoby() throws Exception {
     	HashMap map = new HashMap();
-    	String postString = ObjectMapper.writeValueAsString();
+    	String postString = ObjectMapper.writeValueAsString(map);
     	
     	this.mockMvc.perform(
     			MockMvcRequestBuilders
