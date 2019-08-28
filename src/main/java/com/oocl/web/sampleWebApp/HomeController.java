@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -29,6 +30,12 @@ public class HomeController {
     	map.put("user","name");
     	return map;
     	
+    @PostMapping("/post")
+    @ResponseStatus(HttpStatus.CREATED)
+    public @ResponseBody Map<String, String> getPostMap(@RequestBody Map<String, String> mapRequest) {
+     Map<String, String> map = mapRequest;
+       return map;
+        }	
     	
     }
 }
